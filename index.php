@@ -1,11 +1,13 @@
 <?php
 
 require('./routes/web.php');
+require('./database/mysql.php');
+$config = require('./config/dev.config.php');
 
-$dsn = "mysql:host=localhost;port=3306;dbname=php_app;user=root;charset=utf8mb4";
-$pdo = new PDO($dsn);
-$statement = $pdo->prepare("select * from posts");
-$statement->execute();
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+$id = $_GET['id'];
+
+$db = new Database($config['database']);
+// $posts = $db->query("select * from posts");
+$posts = $db->query("select * from posts where id = :id", [':id' => $id]);
 
 var_dump($posts);
