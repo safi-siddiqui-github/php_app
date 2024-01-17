@@ -22,7 +22,6 @@ class Database
 
     public function query($string, $params = [])
     {
-
         $statement = $this->pdo()->prepare($string);
         $statement->execute($params);
         return $statement->fetchAll();

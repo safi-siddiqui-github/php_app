@@ -6,6 +6,7 @@ $proxy = '/php_app';
 
 $routes = [
     "/" => "./controllers/index.php",
+    "/notes" => "./controllers/notes.php",
 ];
 
 
