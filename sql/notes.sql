@@ -1,5 +1,5 @@
 -- Create Notes table with user_id as a foreign key
-CREATE TABLE php_app.Notes (
+CREATE TABLE notes (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     description TEXT,
@@ -9,7 +9,7 @@ CREATE TABLE php_app.Notes (
 );
 
 -- Insert a user into notes table
-INSERT INTO NOTES (title, description, user_id) VALUES ('Meeting', 'Discuss project details', 3);
+INSERT INTO NOTES (title, description, user_id) VALUES ('Meeting', 'Discuss project details', 1);
 
 -- Drop the existing foreign key constraint
 ALTER TABLE php_app.Notes

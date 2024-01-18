@@ -1,5 +1,5 @@
 -- Create Users table
-CREATE TABLE php_app.Users (
+CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
