@@ -8,3 +8,9 @@
 </head>
 
 <body>
+
+    <header>
+        <?php foreach ($route_names as $key => $value) : ?>
+            <a href="<?= $key ?>"><?= $value ?></a>
+        <?php endforeach ?>
+    </header>

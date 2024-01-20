@@ -1,8 +1,6 @@
 <?php require('partials/head.php') ?>
 
-<h1>
-    <?= $title ?>
-</h1>
+<h1>404 Page Not Found</h1>
 
 <a href="/">Home</a>
 
