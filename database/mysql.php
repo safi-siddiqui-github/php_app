@@ -20,10 +20,14 @@ class Database
         ]);
     }
 
-    public function query($string, $params = [])
+    public function query($string, $params = [], $single = false)
     {
         $statement = $this->pdo()->prepare($string);
         $statement->execute($params);
-        return $statement->fetchAll();
+        if($single){
+            return $statement->fetch();
+        } else {
+            return $statement->fetchAll();
+        }
     }
 }
